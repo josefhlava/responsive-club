@@ -56,6 +56,8 @@ header {
 
 /* Main section */
 
+/* About seaction */
+
 #about {
     height: 500px;
     background-image: url(./resources/7.JPG);
@@ -84,6 +86,59 @@ header {
     padding-bottom: 30px;
 }
 
+/* Team section */
+
+#team {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template: repeat(5, 100px) / repeat(10, 1fr);
+}
+
+#team h2 {
+    grid-area: 1 / 1 / 2 / span 2;
+    justify-self: center;
+    align-self: center;
+    font-family: 'Fruktur', cursive;
+    font-size: 2rem;
+}
+
+.player-box {
+    justify-items: center;
+}
+
+.player-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.player-name {
+    margin: 30px auto;
+    font-size: 1.6rem;
+    padding: 8px;
+    border: 1px solid black;
+    width: 80%;
+    border-radius: 3px;
+}
+
+.danous {
+    grid-area: 3 / 2 / 5 / 4;
+}
+
+.charloss {
+    grid-area: 2 / 4 / 4 / 6;
+}
+
+.zurek {
+    grid-area: 3 / 6 / 5 / 8;
+}
+
+.josef {
+    grid-area: 2 / 8 / 4 / 10;
+}
+
 /* Footer */
 
 footer {
@@ -93,6 +148,8 @@ footer {
     justify-items: center;
     background-color: blanchedalmond;
     border-top: 1px solid black;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .address {
