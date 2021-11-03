@@ -93,6 +93,7 @@ header {
     margin: 0 auto;
     display: grid;
     grid-template: repeat(5, 100px) / repeat(10, 1fr);
+    grid-gap: 10px;
 }
 
 #team h2 {
@@ -104,7 +105,7 @@ header {
 }
 
 .player-box {
-    justify-items: center;
+    justify-content: center;
 }
 
 .player-img {
@@ -115,11 +116,11 @@ header {
 }
 
 .player-name {
-    margin: 30px auto;
+    margin: 30px 5px;
     font-size: 1.6rem;
     padding: 8px;
     border: 1px solid black;
-    width: 80%;
+    width: 180px;
     border-radius: 3px;
 }
 
@@ -137,6 +138,46 @@ header {
 
 .josef {
     grid-area: 2 / 8 / 4 / 10;
+}
+
+/* Photos */
+
+#photos {
+    max-width: 1200px;
+    height: 500px;
+    margin: 0 auto;;
+    background-image: url(./resources/6.JPG);
+    background-position: center;
+    background-size: cover;
+}
+
+.photos-container {
+    background-color: rgb(255, 255, 255, 0.7);
+    display: grid;
+    grid-template: repeat(5, 100px) / repeat(10, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+.photo {
+    width: 250px;
+}
+
+.one {
+    grid-area: 2 / 2 / span 3 / span 3;
+}
+
+.two {
+    grid-area: 1 / 5 / span 3 / span 3;
+}
+
+.three {
+    grid-area: 3 / 5 / span 3 / span 3;
+}
+
+.four {
+    grid-area: 2 / 8 / span 3 / span 3;
 }
 
 /* Footer */
@@ -189,4 +230,57 @@ footer {
 .fa-youtube {
     background: #bb0000;
     color: white;
+}
+
+@media only screen and (max-width: 950px) {
+    #team {
+        grid-template: repeat(10, 70px) / repeat(5, 1fr);
+    }
+    
+    #team h2 {
+        grid-area: 1 / 1 / 2 / span 5;
+    }
+
+    .danous {
+        grid-area: 7 / 2 / span 2 / span 1;
+    }
+    
+    .charloss {
+        grid-area: 3 / 2 / span 2 / span 1;
+    }
+    
+    .zurek {
+        grid-area: 7 / 4 / span 2 / span 1;
+    }
+    
+    .josef {
+        grid-area: 3 / 4 / span 2 / span 1;
+    }
+
+    #photos {
+        height: fit-content;
+        padding: 40px auto
+    }
+
+    .photos-container {
+        grid-template: 1fr 2fr / repeat(4, 1fr);
+        grid-gap: 20px;
+        
+    }
+
+    .one {
+        grid-area: 2 / 1 / span 1 / span 2;
+    }
+    
+    .two {
+        grid-area: 1 / 1 / span 1 / span 2;
+    }
+    
+    .three {
+        grid-area: 1 / 3 / span 1 / span 2;
+    }
+    
+    .four {
+        grid-area: 2 / 3 / span 1 / span 2;
+    }
 }
